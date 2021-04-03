@@ -1,0 +1,487 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #E5E5E5
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  background: #FFFFFF;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+header{
+  position: relative;
+  height: 100px;
+  border-top: 5px solid blue;
+  /* border: 2px solid paleturquoise; */
+}
+
+.img-logo {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+}
+
+/* ナビﾊﾞｰ */
+
+.h-ul {
+  border-top: 1px solid #D2D2D2;
+  border-bottom: 1px solid #D2D2D2;
+  margin-bottom: 30px;
+}
+
+.h-li {
+  border-left: 1px solid #D2D2D2;
+}
+
+
+.h-ul {
+  display: flex;
+}
+
+.h-li {
+  width: calc(100%/6);
+  text-align: center;
+  /* background: cyan; */
+  position: relative;
+}
+
+.h-a {
+  color: #666;
+  text-decoration: none;
+  display: block;
+  /* ↑display: block;を指定。 */
+  /* ↓paddingやmarginを指定できる */
+  padding: 16px 0;
+}
+
+.h-a:hover .h-nav-box2::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  width: 3px;
+  height: 40px;
+  background: blue;
+}
+
+.h-a:hover {
+  background: #E6EBFA;
+  transition: 0.5s;
+}
+
+.h-a:hover .top-nav {
+  color: blue;
+}
+
+.h-nav-box2 {
+  line-height: 1.5;
+}
+
+
+.top-nav {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+}
+
+
+.bottom-nav {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #bababa;
+}
+
+.current {
+  background: #E6EBFA;
+}
+
+.current .h-nav-box2::before{
+  content: "";
+  position: absolute;
+  left: 4px;
+  width: 3px;
+  height: 40px;
+  background: blue;
+
+}
+
+/* メイン */
+.main-box {
+  display: flex;
+  /* border: 1px solid black; */
+  padding: 0 2%;
+}
+
+.main-box-1 {
+  width: 70%;
+  /* background: pink;
+  border: 1px solid red; */
+  max-width: 800px;
+}
+
+/* リンクtable 表 */
+.m-sec-h2 {
+  background-color: blue;
+  color:white;
+  padding: 14px 0 14px 24px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+/* h2の装飾 */
+.m-sec-h2::first-letter {
+  border-left: 3px solid #8e9eef;
+  padding-left: 16px;
+}
+
+.m-sec-p {
+  margin: 0 4%;
+  font-size: 15px;
+  line-height: 1;
+  margin-bottom: 18px;
+  color: #666666;
+}
+
+.sec-table {
+  width: 100%;
+}
+
+.sec-t-td,.sec-td,.sec-tdd {
+  border: 1px solid #CCCCCC;
+  padding: 18px;
+  font-size: 15px;
+  color: #666666;
+}
+
+.sec-td{
+  width: 30%;
+  text-align: center;
+}
+
+.sec-td a {
+  color: #666666;
+}
+
+.sec-td a:hover{
+  color: blue;
+  transition: .3s;
+  text-decoration: none;
+}
+/* /リンクtable 表/ */
+
+/* サイド */
+.said-box-1 {
+  width: 30%;
+  /* background: plum; */
+}
+
+.flame {
+  border: 1px solid #D2D2D2;
+  margin-left: 40px; 
+  max-width: 300px;
+  background: linear-gradient(#fff, #eaeaea);
+  margin-bottom: 20px;
+}
+
+.flame-sub {
+  /* border: 1px solid violet; */
+  margin: 3%;
+}
+
+.said-f-h {
+  border-top: 5px solid blue;
+  padding: 25px 0 25px 10px;
+  border-bottom: 1px solid #D2D2D2;
+  font-weight: bold;
+  background: #EEEEEE;
+  color: #666666;
+}
+
+.said-box-l {
+  border-bottom: 1px solid #D2D2D2;
+}
+
+.said-box-l:hover {
+  background: #fff;
+  transition: 0.3s;
+}
+
+.said-box-a {
+  display: block;
+  padding: 10px 010px 10px;
+  text-decoration: none;
+  color: #666;
+}
+
+.said-box-a:hover {
+  color: blue;
+}
+
+/* <!-- サイドバー2 --> */
+.no-flame {
+  margin-left: 40px; 
+  max-width: 300px;
+  margin-bottom: 20px;
+  /* border: 1px solid firebrick; */
+}
+
+/* <!-- サイドバー1 画像 --> */
+  
+.said-box-a {
+  overflow: hidden;
+}
+
+.said-img {
+  width: 15%;
+  float: left;
+  margin-right: 5px;
+  vertical-align: top;
+}
+
+.said-box-top,.said-box-bottom {
+  font-size: 11px;
+}
+
+.said-box-bottom {
+  line-height: 1rem;
+}
+
+.said-box-top {
+  color: blue;
+}
+
+/* <!-- サイドバー3--> */
+
+.said-f-company {
+  /* border: 1px solid royalblue; */
+  padding-top: 10px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-weight:bold;
+  color: #666666;
+}
+
+
+.said-company-box {
+  /* border: 1px solid black; */
+  text-align: center;
+}
+
+.said-company-box {
+  font-size: 11px;
+  line-height: 1rem;
+  color: #666666;
+}
+
+footer {
+  height: 70px;
+  text-align: center;
+}
+
+.footer-top {
+  font-size: 13px;
+  padding: 15px 0;
+  color: white;
+}
+
+.footer-bottom {
+  font-size: 13px;
+}
+
+.footer-a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-a:hover {
+  opacity: 0;
+  transition: 0.8s;
+}
+
+/* <!-- topに戻るﾎﾞﾀﾝ --> */
+
+
+/* フッター */
+footer {
+  background: blue;
+}
+
+.nav-invisible{
+  position: relative;
+  left: -500vh;
+}
+
+.nav-content {
+  opacity: 0;
+}
+
+/* topに戻るﾎﾞﾀﾝ */
+#page-top {
+  position: fixed;
+  right: 30px;
+  bottom: 70px;
+  width: 50px;
+  height: 50px;
+  background: #5c5c5c;
+}
+
+#page-top:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+
+.move-page-top {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 3rem;
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 780px) {
+  /* ﾚｼﾎﾟﾝｼﾌﾞﾃﾞｻﾞｲﾝ */
+  body {
+    font-size: 16px;
+  }
+
+  .main-box {
+    display: block;
+  }
+
+  .main-box-1 {
+    width: 100%;
+  }
+
+  .said-box-1 {
+    width: 100%;
+  }
+
+  .flame {
+    margin: 0 auto;
+    max-width: 780px;
+    background: linear-gradient(#fff, #eaeaea);
+    margin-bottom: 20px;
+  }
+
+  .no-flame {
+    margin: 0 auto;
+    max-width: 780px;
+    margin-bottom: 20px;
+  }
+
+/* pcのnavﾊﾞｰを隠す */
+  .h-nav-box {
+    display: none;
+  }
+  
+  /* 🍔🈪線をｸﾘｯｸすると出てくるnavﾊﾞｰ🍔 */
+  header{
+    position: relative;
+  }
+  
+  .nav-content {
+    position: absolute;
+    top: 100px;
+    z-index: 100;
+    border: 1px solid ;
+    width: 100%;
+    opacity: 0;
+   }
+
+   .sp-menu-li {
+     background: black;
+     border-bottom: 1px solid white;
+   }
+
+   .sp-menu-h-a {
+     display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: white;
+    line-height: 2rem;
+   }
+
+    .sp-top-nav {
+      font-size: 20px;
+    }
+
+    .sp-bottom-nav {
+      font-size: 12px;
+    }
+
+    /* 🍔ﾊﾝﾊﾞｰｶﾞｰﾒﾆｭｰの🈪線🍔 */
+    .nav-open {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+
+    /* 🍔ﾊﾝﾊﾞｰｶﾞｰﾒﾆｭｰの🈪線の装飾🍔 */ 
+      .nav-open span, .nav-open span::before, .nav-open span::after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 30px;
+        height: 4px;
+        background: black;
+        content: "";
+      }
+
+      .nav-open span::before{
+        top: -20px;
+      }
+
+      .nav-open span::after {
+        top: 20px;
+      }
+
+    /* 🍔ﾊﾝﾊﾞｰｶﾞｰﾒﾆｭｰをｸﾘｯｸした時に✖になる🍔 */
+    #nav-input:checked ~ .nav-open span {
+      background: transparent;
+    }
+
+    #nav-input:checked ~ .nav-open span::before {
+      transform: rotate(-45deg);
+      top: 4px;
+      width: 35px;
+    }
+    
+    #nav-input:checked ~ .nav-open span::after {
+      transform: rotate(45deg);
+      top: 4px;
+      width: 35px;
+    }
+
+    /* 🍔ﾊﾝﾊﾞｰｶﾞｰﾒﾆｭｰが出てきたらnavﾊﾞｰが出てくる🍔 */
+    #nav-input:checked ~ .nav-content {
+      opacity: .8;
+      transition: .8s;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

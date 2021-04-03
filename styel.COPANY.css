@@ -1,0 +1,622 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #E5E5E5;
+  color: #666666;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  background: #FFFFFF;
+  margin: 0 auto;
+  min-height: 100vh;
+  border-top: 5px solid blue;
+}
+
+header{
+  position: relative;
+  height: 100px;
+}
+
+.img-logo {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+}
+
+/* メイン */
+.m-sec-h2 {
+  background-color: blue;
+  color:white;
+  padding: 14px 0 14px 24px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+/* h2の装飾 */
+.m-sec-h2::first-letter {
+  border-left: 3px solid #8e9eef;
+  padding-left: 16px;
+  font-size: 18px;
+}
+
+/* h3の装飾 */
+.m-sec-h3 {
+  background: linear-gradient(#fff, #eee);
+  color: #666666;
+  padding: 14px 0 14px 24px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.m-sec-h3-red {
+  color: red;
+  background: linear-gradient(#fff, #eee);
+  padding: 14px 0 14px 24px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* ｐの装飾 */
+.m-sec-p {
+  margin: 0 4%;
+  font-size: 15px;
+  line-height: 2rem;
+  margin-bottom: 18px;
+}
+
+.m-sec2-p-red {
+  color: red;
+  font-weight: bold;
+  margin: 0 4%;
+  margin-bottom: 15px;
+}
+
+.m-sec-p-gray {
+  margin: 0 4%;
+  line-height: 2rem;
+  text-indent: 1em;
+  background: #CCCCCC;
+  border-radius: 5px;
+}
+
+
+
+/*  ﾃｰﾌﾞﾙﾀｸﾞ */
+.sec-table {
+  margin-bottom: 50px;
+}
+
+.sec-td,.sec-td-content {
+  /* border: 1px solid black;  */
+  padding: 15px; 
+  font-size: 15px;
+}
+
+.sec-table {
+  width: 100%;
+  border: 1px solid #cccc;
+}
+
+.sec-td {
+  width: 30%;
+
+  /* text-align: center;
+  line-height: 1.5rem; */
+}
+
+.sec-td-content {
+  width: 70%;
+  line-height: 1.5rem;
+  border-left: 1px solid #cccc;
+
+}
+
+/* td自体（▢）を上下左右中央にする */
+.sec-tr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #cccc;
+
+}
+
+/* 「見出し」(ﾃｷｽﾄ)を上下左右中央にする */
+.sec-td {  
+  position: relative;
+}
+
+.sec-p {
+  /* border: 1px solid royalblue; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.m-sec-p span {
+  color: red;
+}
+
+.sec-a {
+  color: #666666;
+}
+
+.sec-a:hover {
+  color: blue;
+  transition: .3s;
+}
+
+/* ナビﾊﾞｰ */
+
+.h-ul {
+  border-top: 1px solid #D2D2D2;
+  border-bottom: 1px solid #D2D2D2;
+  margin-bottom: 30px;
+}
+
+.h-li {
+  border-left: 1px solid #D2D2D2;
+}
+
+
+.h-ul {
+  display: flex;
+}
+
+.h-li {
+  width: calc(100%/6);
+  text-align: center;
+  /* background: cyan; */
+  position: relative;
+}
+
+.h-a {
+  color: #666;
+  text-decoration: none;
+  display: block;
+  /* ↑display: block;を指定。 */
+  /* ↓paddingやmarginを指定できる */
+  padding: 16px 0;
+}
+
+.h-a:hover .h-nav-box2::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  width: 3px;
+  height: 40px;
+  background: blue;
+}
+
+.h-a:hover {
+  background: #E6EBFA;
+  transition: 0.5s;
+}
+
+.h-a:hover .top-nav {
+  color: blue;
+}
+
+.h-nav-box2 {
+  line-height: 1.5;
+}
+
+
+.top-nav {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+}
+
+
+.bottom-nav {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #bababa;
+}
+
+.current {
+  background: #E6EBFA;
+}
+
+.current .h-nav-box2::before{
+  content: "";
+  position: absolute;
+  left: 4px;
+  width: 3px;
+  height: 40px;
+  background: blue;
+
+}
+
+/* メイン */
+.main-box {
+  display: flex;
+  /* border: 1px solid black; */
+  padding: 0 2%;
+}
+
+.main-box-1 {
+  width: 70%;
+  /* background: pink; */
+  /* border: 1px solid red; */
+  max-width: 800px;
+}
+
+/* サイド */
+.said-box-1 {
+  width: 30%;
+  /* background: plum; */
+}
+
+.flame {
+  border: 1px solid #D2D2D2;
+  margin-left: 40px; 
+  max-width: 300px;
+  background: linear-gradient(#fff, #eaeaea);
+  margin-bottom: 20px;
+}
+
+.flame-sub {
+  /* border: 1px solid violet; */
+  margin: 3%;
+}
+
+.said-f-h {
+  border-top: 5px solid blue;
+  padding: 25px 0 25px 10px;
+  border-bottom: 1px solid #D2D2D2;
+  font-weight: bold;
+  background: #EEEEEE;
+  color: #666666;
+}
+
+.said-box-l {
+  border-bottom: 1px solid #D2D2D2;
+}
+
+.said-box-l:hover {
+  background: #fff;
+  transition: 0.3s;
+}
+
+.said-box-a {
+  display: block;
+  padding: 10px 010px 10px;
+  text-decoration: none;
+  color: #666;
+}
+
+.said-box-a:hover {
+  color: blue;
+}
+
+/* <!-- サイドバー2 --> */
+.no-flame {
+  margin-left: 40px; 
+  max-width: 300px;
+  margin-bottom: 20px;
+  /* border: 1px solid firebrick; */
+}
+
+/* <!-- サイドバー1 画像 --> */
+  
+.said-box-a {
+  overflow: hidden;
+}
+
+.said-img {
+  width: 15%;
+  float: left;
+  margin-right: 5px;
+  vertical-align: top;
+}
+
+.said-box-top,.said-box-bottom {
+  font-size: 11px;
+}
+
+.said-box-bottom {
+  line-height: 1rem;
+}
+
+.said-box-top {
+  color: blue;
+}
+
+/* <!-- サイドバー3--> */
+
+.said-f-company {
+  /* border: 1px solid royalblue; */
+  padding-top: 10px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-weight:bold;
+  color: #666666;
+}
+
+
+.said-company-box {
+  /* border: 1px solid black; */
+  text-align: center;
+}
+
+.said-company-box {
+  font-size: 11px;
+  line-height: 1rem;
+  color: #666666;
+}
+
+footer {
+  height: 70px;
+  text-align: center;
+}
+
+.footer-top {
+  font-size: 13px;
+  padding: 15px 0;
+  color: white;
+}
+
+.footer-bottom {
+  font-size: 13px;
+}
+
+.footer-a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-a:hover {
+  opacity: 0;
+  transition: 0.8s;
+}
+
+/* <!-- topに戻るﾎﾞﾀﾝ --> */
+#page-top {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid palevioletred; */
+  position: fixed;
+  right: 60px;
+  bottom: 70px;
+  /* display: none; */
+}
+
+
+#move-page-top {
+  border: 1px solid white;
+  display: block;
+  padding: 18px;
+  background: #5C5C5C;
+  color: white;
+  text-decoration: none;
+}
+
+#move-page-top:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.nav-input {
+  position: absolute;
+  left: -100px;
+}
+
+.nav-contents {
+  display: none;
+}
+
+.nav-invisible {
+  position: absolute;
+  left: -50vw;
+}
+
+
+@media screen and (max-width: 780px) {
+  body {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 2%;
+  }
+
+  .main-box {
+    display: block;
+    /* border: 1px solid black; */
+    padding: 0 2%;
+  }
+
+  .main-box-1 {
+    width: 100%;
+    /* background: pink; */
+    /* border: 1px solid red; */
+  }
+
+  .said-box-1 {
+    width: 100%;
+    /* background: plum; */
+  }
+  
+  .flame {
+    border: 1px solid #D2D2D2;
+    margin-left: 40px; 
+    max-width: 780px;
+    background: linear-gradient(#fff, #eaeaea);
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .no-flame {
+    margin-left: 40px; 
+    max-width: 780px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    
+    /* border: 1px solid firebrick; */
+  }
+  
+  
+  
+
+
+  .h-logo-img {
+    width: 60%;
+    padding-left: -2%;
+  }
+
+  .h-nav {
+    display: none;
+  }
+
+  .m-sec-h2,.m-sec-h3 {
+    padding: 10px 11px;
+  }
+
+  .m-sec-h2::first-letter {
+    padding-left: 8px;
+  }
+
+
+  /* PCのナビﾊﾞｰはでないようにする */
+  .h-nav-box {
+    display: none;
+  }
+
+
+  /* 3/22（月）～作成 */
+      /* ①ﾊﾝﾊﾞｰｶﾞｰﾒﾆｭｰの三本線 */
+      /* ②出てくるnavﾊﾞｰ */
+      /* ③input: */
+
+   /* ①-ⅰ.三本線を囲む箱 */
+  .nav-open {
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    transform: translateY(-50%);
+  }
+
+  /* ①-ⅱ.三本線の共通スタイル */
+  #nav-open span,#nav-open span::before,#nav-open span::after{
+    width: 30px;
+    height: 5px;
+    background: black;
+    position: absolute;
+    content: "";
+  }
+
+  /* ①-ⅲ.三本線の位置 */
+  #nav-open span {
+    position: absolute;
+    left: 10px;
+    top: 23px;
+  }
+
+  #nav-open span::before {
+    top: 12px; 
+   }
+
+   #nav-open span::after {
+     bottom: 12px;
+   }
+
+   /* ①-ⅳ. ｸﾘｯｸした時に✖になる */
+   #nav-input:checked ~ #nav-open span {
+     background: transparent;
+   }
+
+  #nav-input:checked ~ #nav-open span::before {
+    transform: rotate(45deg);
+    top: -4px;
+    width: 35px;
+  }
+   
+  #nav-input:checked ~ #nav-open span::after {
+    transform: rotate(-45deg);
+    bottom: 4px;
+    width: 35px;
+  }
+ 
+        /* ②出てくるnavﾊﾞｰ */
+  .nav-contents {
+    position: absolute;
+    top: 100px;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    background: black;
+    transition: 0.3s;
+    opacity: 0;
+  }
+
+  .sp-menu-list {
+    border-bottom: 1px solid white;
+    padding: 16px;
+    line-height: 2rem;
+    text-align: left;
+  }
+
+  .sp-menu-list-top {
+    font-size: 20px;
+    color: white;
+  }
+
+  .sp-menu-list-bottom {
+    font-size: 12px;
+    color: white;
+  }
+
+  .sp-menu-a {
+    display: block;
+    text-decoration: none;
+  }
+
+  #nav-input:checked ~ .nav-contents {
+    display: block;
+    /*↑display: none;でnav-contentsを消しているので、display:block1で表示させる */
+    opacity: .8;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* フッター */
+footer {
+  background: blue;
+}
+
+
+
+
+
+
+

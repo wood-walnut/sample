@@ -1,0 +1,754 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #E5E5E5;
+  color: #666666;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  background: #FFFFFF;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+header{
+  position: relative;
+  height: 100px;
+}
+
+.img-logo {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+}
+
+/* メイン */
+.m-sec-h2 {
+  background-color: blue;
+  color:white;
+  padding: 14px 0 14px 24px;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+/* h2の装飾 */
+.m-sec-h2::first-letter {
+  border-left: 3px solid #8e9eef;
+  padding-left: 16px;
+  font-size: 18px;
+}
+
+/* h3の装飾 */
+.m-sec-h3 {
+  background: linear-gradient(#fff, #eee);
+  color: #666666;
+  padding: 14px 0 14px 24px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.m-sec-h3-red {
+  color: red;
+  background: linear-gradient(#fff, #eee);
+  padding: 14px 0 14px 24px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* ｐの装飾 */
+.m-sec-p {
+  margin: 0 4%;
+  font-size: 15px;
+  line-height: 2rem;
+  margin-bottom: 18px;
+}
+
+.m-sec2-p-red {
+  color: red;
+  font-weight: bold;
+  margin: 0 4%;
+}
+
+.m-sec-p-gray {
+  margin: 0 4%;
+  line-height: 2rem;
+  text-indent: 1em;
+  background: #CCCCCC;
+  border-radius: 5px;
+}
+
+
+
+/*  ﾃｰﾌﾞﾙﾀｸﾞ */
+th,td { 
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+th {
+  width: 25%;
+  text-align: center;
+}
+
+td {
+  text-align: left;
+}
+
+td a {
+  color: #666; 
+}
+/*  /ﾃｰﾌﾞﾙﾀｸﾞ */
+
+
+
+
+/* ナビﾊﾞｰ */
+
+.h-ul {
+  border-top: 1px solid #D2D2D2;
+  border-bottom: 1px solid #D2D2D2;
+  margin-bottom: 30px;
+}
+
+.h-li {
+  border-left: 1px solid #D2D2D2;
+}
+
+
+.h-ul {
+  display: flex;
+}
+
+.h-li {
+  width: calc(100%/6);
+  text-align: center;
+  /* background: cyan; */
+  position: relative;
+}
+
+.h-a {
+  color: #666;
+  text-decoration: none;
+  display: block;
+  /* ↑display: block;を指定。 */
+  /* ↓paddingやmarginを指定できる */
+  padding: 16px 0;
+}
+
+.h-a:hover .h-nav-box2::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  width: 3px;
+  height: 40px;
+  background: blue;
+}
+
+.h-a:hover {
+  background: #E6EBFA;
+  transition: 0.5s;
+}
+
+.h-a:hover .top-nav {
+  color: blue;
+}
+
+.h-nav-box2 {
+  line-height: 1.5;
+}
+
+
+.top-nav {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+}
+
+
+.bottom-nav {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #bababa;
+}
+
+.current {
+  background: #E6EBFA;
+}
+
+.current .h-nav-box2::before{
+  content: "";
+  position: absolute;
+  left: 4px;
+  width: 3px;
+  height: 40px;
+  background: blue;
+}
+
+/* メイン */
+.main-box {
+  display: flex;
+  /* border: 1px solid black; */
+  padding: 0 2%;
+}
+
+.main-box-1 {
+  width: 70%;
+  /* background: pink;
+  border: 1px solid red; */
+  max-width: 800px;
+}
+
+/* <!-- ﾘﾝｸｶｰﾄﾞ--> */
+
+.card {
+  border: 1px solid #ccc;
+  /*↓ 画像の外側に余白をつける */
+  padding: 20px;
+  overflow: hidden;
+  /* ↑画像の高さを認識させる */
+  position: relative;
+  /* ↑疑似要素→にposition: absoluteを指定した為 */
+    /* ↓影を付ける事ができる */
+    box-shadow: 0px 5px 10px #ccc;
+    /* ↑上が0、左右5px、下10pxに”cccの色で影をつける */
+    background: linear-gradient(#fff,#eee);
+    /* 背景にｸﾞﾗﾃﾞｰｼｮﾝをかける 上側が＃fffで下側が＃ccc */
+    margin-bottom: 20px;
+}
+
+  /* ↓ｶｰﾄﾞに矢印を当てた時に、ｶｰﾄﾞに少し動きが出るように指定する */
+  /* ①hoverをつけてあげる */
+.card:hover {
+  /* ↓少し浮いた感じにする。影を少し広くしてあげると浮いた感じがでる */
+  box-shadow: 0px 10px 20px #ccc;
+  /* 要素を実際に動かす場合は  transform
+  上に動かす場合からtranslateY(-5px)*/
+  transform: translateY(-5px);
+  /* 繋がったように動かすように0.3秒ぐらいかけて動かすようにする */
+  transition: .3s;
+  background: #fff;
+}
+
+
+
+.main-link-img {
+  width: 25%;
+  /* ↑画像が大きすぎるのでリンクカードの25％を指定 */
+  float: left;
+  margin-right: 10px;
+}
+
+.main-link a {
+  text-decoration: none;
+  color: #666;
+}
+
+.card h4 {
+  color: blue;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.card p {
+  font-size: 15px;
+}
+
+.card p:hover {
+  color: blue;
+  transition: .3s;
+}
+
+/* 右上の→ */
+.card::before{
+  content: "→";
+  /* 場所を指定する↓ */
+  position: absolute;
+  /* ↑これを使う時は親要素にposition: relative(card)を指定する*/
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  background: #666;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 2px;
+}
+
+.card:hover::before{
+  background: black;
+}
+
+/* ﾘﾝｸｶｰﾄﾞ2 */
+.card-2 {
+  border: 1px solid #ccc;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px #ccc;
+  background: linear-gradient(#fff,#eee);
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.card-2::before {
+  content: "→";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #7E7E7E;
+  color: white;
+}
+
+.card-2:hover::before {
+  background: black;
+}
+
+.card-2:hover {
+  box-shadow: 0px 10px 20px #ccc;
+  transform: translateY(-5px);
+  transition: .3s;
+  background:#fff;
+}
+
+ 
+.card-img{
+  float: left;
+  margin-right: 10px;
+  max-width: 100%;
+  height: auto;
+  width: 25%;
+}
+
+.card-2 h4 {
+  font-size: 18px;
+  color: blue;
+  line-height: 2;
+}
+
+.card-2 p {
+  font-size: 15px;
+  line-height: 2;
+}
+
+.card p,.card-2 p {
+  color: #666;
+}
+
+.card-2 p:hover {
+  color: blue;
+  transition: 0.3s;
+}
+
+.main-box-1 a {
+  text-decoration: none;
+}
+ /* <!-- ﾘﾝｸｶｰﾄﾞ4 --> */
+.card-4 {
+  border: 1px solid #ccc;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px #ccc;
+  background: linear-gradient(#fff,#eee);
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.card-4:hover {
+  box-shadow: 0px 10px 20px #ccc;
+  transform: translateY(-5px);
+  transition: .3s;
+  background:#fff;
+}
+
+.card-4 h4 {
+  font-size: 18px;
+  color: blue;
+  line-height: 2;
+}
+
+.card-4 p {
+  font-size: 15px;
+  line-height: 2;
+  color: #666;
+}
+
+.card-4 p:hover {
+  color: blue;
+}
+ /* <!-- /ﾘﾝｸｶｰﾄﾞ4/ --> */
+
+  /* <!-- ﾘﾝｸｶｰﾄﾞ5 --> */
+.card-5 {
+  /* border: 1px solid black; */
+}
+
+.sub-link-img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.card-5 a{
+  text-decoration: underline;
+  color: #666;
+}
+
+.card-5 a:hover {
+  color: blue;
+  text-decoration: none;
+}
+  /* </!-- ﾘﾝｸｶｰﾄﾞ5 /--> */
+
+/* /<!-- ﾘﾝｸｶｰﾄﾞ-->/ */
+
+
+/* サイド */
+.said-box-1 {
+  width: 30%;
+  /* background: plum; */
+}
+
+.flame {
+  border: 1px solid #D2D2D2;
+  margin-left: 40px; 
+  max-width: 300px;
+  background: linear-gradient(#fff, #eaeaea);
+  margin-bottom: 20px;
+}
+
+.flame-sub {
+  /* border: 1px solid violet; */
+  margin: 3%;
+}
+
+.said-f-h {
+  border-top: 5px solid blue;
+  padding: 25px 0 25px 10px;
+  border-bottom: 1px solid #D2D2D2;
+  font-weight: bold;
+  background: #EEEEEE;
+  color: #666666;
+}
+
+.said-box-l {
+  border-bottom: 1px solid #D2D2D2;
+}
+
+.said-box-l:hover {
+  background: #fff;
+  transition: 0.3s;
+}
+
+.said-box-a {
+  display: block;
+  padding: 10px 010px 10px;
+  text-decoration: none;
+  color: #666;
+}
+
+.said-box-a:hover {
+  color: blue;
+}
+
+/* <!-- サイドバー2 --> */
+.no-flame {
+  margin-left: 40px; 
+  max-width: 300px;
+  margin-bottom: 20px;
+  /* border: 1px solid firebrick; */
+}
+
+/* <!-- サイドバー1 画像 --> */
+  
+.said-box-a {
+  overflow: hidden;
+}
+
+.said-img {
+  width: 15%;
+  float: left;
+  margin-right: 5px;
+  vertical-align: top;
+}
+
+.said-box-top,.said-box-bottom {
+  font-size: 11px;
+}
+
+.said-box-bottom {
+  line-height: 1rem;
+}
+
+.said-box-top {
+  color: blue;
+}
+
+/* <!-- サイドバー3--> */
+
+.said-f-company {
+  /* border: 1px solid royalblue; */
+  padding-top: 10px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-weight:bold;
+  color: #666666;
+}
+
+
+.said-company-box {
+  /* border: 1px solid black; */
+  text-align: center;
+}
+
+.said-company-box {
+  font-size: 11px;
+  line-height: 1rem;
+  color: #666666;
+}
+
+footer {
+  height: 70px;
+  text-align: center;
+}
+
+.footer-top {
+  font-size: 13px;
+  padding: 15px 0;
+  color: white;
+}
+
+.footer-bottom {
+  font-size: 13px;
+}
+
+.footer-a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-a:hover {
+  opacity: 0;
+  transition: 0.8s;
+}
+
+/* <!-- topに戻るﾎﾞﾀﾝ --> */
+#page-top {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  right: 60px;
+  bottom: 70px;
+  /* display: none; */
+}
+
+
+#move-page-top {
+  border: 1px solid white;
+  display: block;
+  padding: 18px;
+  background: #5C5C5C;
+  color: white;
+  text-decoration: none;
+}
+
+#move-page-top:hover {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+/* フッター */
+footer {
+  background: blue;
+}
+
+#nav-input {
+  position: absolute;
+  left: -500vw;
+}
+
+.nav-content {
+  display: none;
+}
+
+@media screen and (max-width: 780px) {
+  body {
+    font-size: 11px;
+  }
+
+  .main-box{
+    display: block;
+  }
+
+  .main-box-1 {
+    width: 100%;
+  }
+
+  .said-box-1 {
+    width: 100%;
+  }
+
+  .flame {
+    display: block;
+    max-width: 780px;
+    margin: 0 auto;
+    border: 1px solid #D2D2D2;
+    background: linear-gradient(#fff, #eaeaea);
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .no-flame {
+    display: block;
+    max-width: 780px;
+    margin: 0 auto;
+    border: 1px solid #D2D2D2;
+    background: linear-gradient(#fff, #eaeaea);
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .said-box-1 {
+    display: none;
+  }
+
+  .card-5 p {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  /* 🍔の位置を決めるためにrelativeを設定🍔 */
+ .h-nav-box {
+   display: none;
+ }
+
+ .nav-content {
+   position: absolute;
+   top: 100px;
+   z-index: 100;
+   width: 100%;
+   background: black;
+   transition: 0.3s;
+   opacity: 0;
+ }
+
+ .sp-menu-list {
+   border: 1px solid black;
+   display: block;
+   height: auto;
+   text-align: left;
+   line-height: 2rem;
+   border-bottom: 1px solid white;
+ }
+
+ .sp-menu-a {
+   display: block;
+   padding: 14px;
+   text-decoration: none;
+   color: white;
+ }
+
+ .top-nav {
+   font-size: 20px;
+   font-weight: normal;
+ }
+
+ .bottom-nav {
+   font-size: 12px;
+   /* line-height: 2rem; */
+ }
+
+
+
+  #sp-menu {
+    position: relative;
+  }
+  /* ↑🍔の箱の中で🈪の位置を指定できるようにrelativeをあてる。
+  箱の左上が基準になる→そこから🈪の線の位置を決める事ができる */
+
+  /* 🍔の箱🍔 */
+  #nav-open {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    display: block;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+  }
+
+  /* 🍔🈪の3本線🍔 */
+  .nav-open span,.nav-open span::before,.nav-open ::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin: auto;
+    /* ↑線が箱の丁度真ん中にくる！ */
+    content: "";
+  }
+
+    /* 🍔🈪の3本線の間隔🍔 */
+    .nav-open span::before {
+      top: -20px;
+    }
+
+    .nav-open ::after {
+      top: 20px;
+    }
+
+        /* 🍔🈪の3本線をｸﾘｯｸすると✖になる🍔 */
+        #nav-input:checked ~ .nav-open span {
+          background: transparent;
+        }
+
+        #nav-input:checked ~ .nav-open span::before {
+          transform: rotate(-45deg);
+          top: 3px;
+          width: 35px;
+          right: 10px;
+        }
+
+        #nav-input:checked ~ .nav-open span::after {
+          transform: rotate(45deg);
+          top: 4px;
+          width: 35px;
+          right: 10px;
+        }
+
+        /* ☑が入った時にnavﾊﾞｰが表示される */
+        #nav-input:checked ~ .nav-content {
+          display: block;
+          opacity: 0.8;
+        }
+
+}
+
+
+
+
+
+
+
+
+

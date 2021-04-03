@@ -1,0 +1,648 @@
+
+@charset "UTF-8";
+
+body {
+  background: #E5E5E5;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  min-height: 100vh;
+  border-top: 5px solid blue;
+}
+
+.h-logo-img {
+  width: 300px;
+  margin: 40px;
+}
+
+.container {
+  display: flex;
+  margin: 0 4%;
+  margin-top: 30px;
+}
+
+header {
+  /* background: skyblue; */
+}
+
+.h-ul {
+  display: flex;
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.h-li {
+  width: calc(100% / 6);
+  text-align: center;
+  border-right: 1px solid #d2d2d2;
+  letter-spacing: .2rem;
+  line-height: 1rem;
+  position: relative;
+}
+
+.h-li-box {
+  display: block;
+  /* border: 1px solid black; */
+  width: 100%;
+}
+
+.h-li:hover .h-li-box::before {
+  content: "";
+  position: absolute;
+  /* top: 2px; */
+  left: 4px;
+  display: inline-block;
+  width: 3px;
+  height: 35px;
+  background-color: blue;
+}
+
+.h-li-box:hover {
+  background: rgb(230,235,250);
+  /* border-left: 3px solid blue; */
+}
+
+.h-li-box-top:hover {
+  color: #0e36ca;
+}
+
+.h-li a {
+  text-decoration: none;
+  color: #666666;
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+/* navのhover時に色が変わらない
+↑aタグに対してhoverの指定ができるように
+padding-topとpadding-bottomを指定する
+http://www2.otani.ac.jp/fkdsemi/css_oyo/link_hannou/link_hannou.html */
+
+/* ↓aタグに対してhoverを指定する */
+.h-li a:hover{
+  background: rgb(230,235,250);
+  transition: 0.2s;
+}
+
+.h-li-box-top {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.h-li-box-top:hover {
+  color: #0e36ca;
+}
+
+.h-li-box-bottom {
+  font-size: 11px;
+}
+
+.active {
+  background-color: #e6ebfa;
+}
+
+.active .h-li-box::before {
+  content: "";
+  position: absolute;
+  /* top: 2px; */
+  left: 4px;
+  display: inline-block;
+  width: 3px;
+  height: 35px;
+  background-color: blue;
+}
+
+
+.h-img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+
+.main {
+  /* background: slateblue; */
+  width: 70%;
+}
+
+.m-sec2 {
+  margin-bottom: 300px;
+}
+
+.m-sec2 p {
+  margin: 0 20px;
+}
+
+
+.m-sec-h2 {
+  background-color: blue;
+  color:white;
+  padding: 14px 0 14px 24px;
+  border-radius: 5px;
+  font-size: 18px;
+  /* margin-top: 36px; */
+  margin-bottom: 24px;
+}
+
+.m-sec-h2::first-letter {
+  border-left: 3px solid #8e9eef;
+  padding-left: 16px;
+  font-size: 18px;
+}
+
+.m-sec-h3 {
+  background: linear-gradient(#fff, #eee);
+  color: #666666;
+  padding: 14px 0 14px 24px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.m-sec-dl {
+  padding: 0 20px;
+  color: #666666;
+  margin-bottom: 30px;
+}
+
+.m-sec-date {
+  float: left;
+  clear: both;
+  overflow: hidden;
+  padding: 8px 32px 5px 0;
+  color: #0e36ca;
+  font-size: 15px;
+}
+
+.m-sec-contet {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.m-sec-contet span {
+  font-size: 11px;
+  background: red;
+  color: white;
+  padding: 2px 3px;
+  border-radius: 2px;
+  vertical-align: top;
+}
+
+.m-sec-log {
+  display: block;
+  font-size: 15px;
+  text-align: right;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.m-sec-log a {
+  color: #666;
+}
+
+.m-sec2-p {
+  line-height: 2;
+  font-size: 15px;
+  color: #666;
+}
+
+.m-sec2-p-red {
+  color: red;
+  font-weight: bold;
+}
+
+.m-sec2-a {
+  color: #666;
+}
+
+.m-sec2-a:hover{
+  color: #0e36ca;
+}
+
+ .m-sec-h3-red {
+  color: red;
+  background: linear-gradient(#fff, #eee);
+  padding: 14px 0 14px 24px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
+
+.aside {
+  width: 30%;
+}
+
+.frame {
+  margin: 0 20px 30px;
+  border: 1px solid #D2D2D2;
+  background: linear-gradient(#fff, #eaeaea);
+}
+
+.aside-box {
+  /* border: 1px solid black; */
+  margin: 0 10px;
+}
+
+.aside-h4 {
+  /* border: 1px solid #8e9eef; */
+  margin-top: 10px;
+  border-top: 3px solid blue;
+  border-bottom: 1px solid #ccc ;
+  padding: 20px 0 20px 5px;
+  font-weight: bold;
+  background: #eee;
+}
+
+.aside-ul {
+  margin-bottom: 10px;
+}
+
+
+.aside-li {
+  padding: 10px 0 10px 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.aside-li:hover {
+  color: blue;
+  background: #fff;
+  /* opacity: 0.8; */
+  transition: 0.8s;
+}
+
+
+.aside-a {
+  color: #666;
+  text-decoration: none;
+}
+
+.aside-a:hover {
+  color: #0e36ca;
+}
+
+
+.frame-no {
+  margin: 0 20px 30px;
+  background: linear-gradient(#fff, #eaeaea);
+}
+
+.aside-li-no {
+  padding: 10px 0 10px 5px;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+
+a .aside-a {
+text-decoration: none;
+}
+
+.aside-img {
+  float: left;
+  width: 15%;
+  /* height: auto; */
+  margin-right: 5px;
+}
+
+.aside-info {
+  font-size: 12px;
+  color: #0e36ca;
+}
+
+.aside-info-bottom {
+  font-size: 12px;
+  color: #666;
+  line-height: -2;
+}
+
+.aside-company {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #666666;
+}
+
+.aside-adress {
+  font-size: 11px;
+  padding-bottom: 20px;
+  color: #666666;
+}
+
+.aside-company,.aside-adress p {
+  text-align: center;
+  line-height: 1rem;
+}
+
+
+
+
+
+footer {
+  padding: 16px 0;
+  line-height: 2;
+  background: #0e36ca;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 12px;
+  color: #fff;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer a:hover {
+  color: #0e36ca;
+  transition: 0.3s;
+}
+
+
+.page-top {
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.page-top p {
+  margin: 0 ;
+	padding: 0 ;
+  position: fixed;
+  right: 4%;
+  bottom: 100px;
+}
+
+.move-page-top {
+  display: block;
+  /* <a>タグはインライン要素なので、高さや余白が綺麗に指定できません。 */
+  /* しかしdisplay:block;にすればきちんと指定ができるので、簡単にボタンが作れる */
+  background: #666666;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  line-height: 50px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.move-page-top:hover {
+  opacity: 0.85;
+}
+
+ﾊﾝﾊﾞｰｶﾞｰﾒﾆｭｰの（三）を書いていく
+/* ②線は3本準備するので2本目と3本目は疑似要素を使う */
+#nav-open span ,#nav-open span::before,#nav-open span::after {
+  /* ↓①場所を指定したいので position: absoluteを指定 */
+  position: absolute;
+  /* ③線の長さや色は共通なのでここに書いていく */
+  width: 30px;
+  height: 3px;
+  background:#666;
+  content: "";
+  /* ↑疑似要素には必ず必要 */
+  cursor: pointer;
+}
+
+/* ヘッダーの高さが100px。50pxに（三）の一番上の線を持ってくる */
+#nav-open span {
+  top: 38px;
+  /* right: 30px; */
+  right: 300px;
+}
+
+#nav-open span::before {
+  /* bottom: -12px; */
+}
+/* /* ↑上から丁度50pxの場所 *（三）の真ん中/ * */
+/* (三)の一番上の線から－12px下に位置する */
+
+
+#nav-open span::after {
+  /* bottom: -24px; */
+  /*↑ (三)の一番上の線から－24px下に位置する */
+}
+
+/* 表示されている☑と「ホーム」「HOME」を隠す */
+/* ①「ホーム」「HOME」 */
+.nav-contents {
+  /* display: none; */
+}
+
+/* ②☑ */
+  .nav-invisible {
+    position: absolute;
+    left: -50vw;
+    /* display: none; */
+    /* ↑ display: noneにするとﾊﾝﾊﾞｰｶﾞｰﾒﾆｭｰ（三）をｸﾘｯｸしても効かない。だから隠す。
+    → left: -50vwを指定。 */
+  }
+
+  /* ﾊﾝﾊﾞｰｶﾞｰﾒﾆｭｰをｸﾘｯｸした時にnavバーが出てくるように設定していく */
+  .nav-contents {
+    /* ①表示されたい場所を指定 */
+    position: absolute;  
+    /* ヘッダーが100pxあるので100pxより下に表示されるように設定する↓ */
+    top: 100px;
+    /* 要素が重なった時に全面に出るようにz-index: ;を指定。数値が大きいほど前面にでる */
+    z-index: 100;
+    /* 要素の幅 */
+    width: 100%;
+    max-width: 1200px;
+    /* 高さは自動 */
+    height: auto;
+    background: black;
+    /* ↓ゆっくり表示される */
+    transition: .3s;
+    /* 通常は表示されない。0にすると実際にはあるが見えないように表示する事ができる*/
+    opacity: 0;
+  }
+
+  /* [関節セレクタ]
+  ﾊﾝﾊﾞｰｶﾞｰﾒﾆｭｰを押した時にnavﾊﾞｰが（↑↑黒い横長のﾒﾆｭｰ）表示されるように設定する
+  <input type="checkbox" id="nav-input" class="nav-invisible">にチェックが入った時にnavﾊﾞｰが表示されるようにする（ <div class="nav-contents">から全て表示）
+  関節セレクタ：指定したタグ（<input type="checkbox" id="nav-input" class="nav-invisible">と同じ親要素を持ち、かつそのタグから下の要素に命令を指定できる（～の後ろの要素）
+  ） */
+
+  /* 書き方
+  ①疑似クラスを使ってcheckが入った状態を定義する
+  ②～を指定
+  ③～の後に命令してい要素を書く */
+  /* ④命令をかく */
+
+  #nav-input:checked ~ .nav-contents {
+    opacity: .8;
+  }
+
+  /* 出てくるﾒﾆｭｰに対してスタイルを当てていく。 */
+  /* 出てくるのはlistになる */
+
+
+  .sp-menu-list {
+    border-bottom: 1px solid white;
+    /* ↑下線 */
+    text-align: left;
+    /* ↑文字は左寄せ */
+    line-height: 2.0;
+    /* ↑行間 */
+    padding: 16px;
+    /* ↑余白 */
+  }
+
+  .sp-menu-list a {
+    /* ↑文字自体にスタイルを設定する */
+    color: white;
+    text-decoration: none;
+  }
+
+  .sp-menu-top {
+    font-size: 18px;
+  }
+
+  .sp-menu-bottom {
+    font-size: 11px;
+  }
+  
+
+  /* #nav-input:checked ~ .nav-contents {
+    opacity: .8; */
+    /* ↑④opacity: 0;に指定していたが、見えるように設定
+    opacity: 1;にすると完全に表示。小数点を指定する事により透けたように見せる事ができる */
+  /* } */
+
+
+
+@media screen and (max-width: 780px) {
+  body {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  
+  .container {
+    flex-direction: column;
+    padding: 2%;
+  }
+
+  .h-logo-img {
+    width: 60%;
+    padding-left: -2%;
+  }
+
+  .h-nav {
+    display: none;
+  }
+
+  .m-sec-h2,.m-sec-h3 {
+    padding: 10px 11px;
+  }
+
+  .m-sec-h2::first-letter {
+    padding-left: 8px;
+  }
+  
+  .m-sec-date {
+    /* font-size: 10px; */
+  }
+
+  /* ﾊﾝﾊﾞｰｶﾞｰﾒﾆｭｰの（三）を書いていく */
+/* ②線は3本準備するので2本目と3本目は疑似要素を使う */
+#nav-open span ,#nav-open span::before,#nav-open span::after {
+  /* ↓①場所を指定したいので position: absoluteを指定 */
+  position: absolute;
+  /* ③線の長さや色は共通なのでここに書いていく */
+  width: 30px;
+  height: 3px;
+  background:#666;
+  content: "";
+  /* ↑疑似要素には必ず必要 */
+  cursor: pointer;
+}
+
+/* ヘッダーの高さが100px。50pxに（三）の一番上の線を持ってくる */
+#nav-open span {
+  top: 28px;
+  right: 3%;
+}
+
+#nav-open span::before {
+  bottom: -12px;
+}
+/* /* ↑上から丁度50pxの場所 *（三）の真ん中/ * */
+/* (三)の一番上の線から－12px下に位置する */
+
+
+#nav-open span::after {
+  bottom: -24px;
+  /*↑ (三)の一番上の線から－24px下に位置する */
+}
+
+  /* ﾊﾝﾊﾞｰｶﾞｰﾒﾆｭｰをｸﾘｯｸした時にnavバーが出てくるように設定していく */
+  .nav-contents {
+    /* ①表示されたい場所を指定 */
+    position: absolute;  
+    /* ヘッダーが100pxあるので100pxより下に表示されるように設定する↓ */
+    top: 100px;
+    /* 要素が重なった時に全面に出るようにz-index: ;を指定。数値が大きいほど前面にでる */
+    z-index: 100;
+    /* 要素の幅 */
+    width: 100%;
+    max-width: 1200px;
+    /* 高さは自動 */
+    height: auto;
+    background: black;
+    /* ↓ゆっくり表示される */
+    transition: .3s;
+    /* 通常は表示されない。0にすると実際にはあるが見えないように表示する事ができる*/
+    opacity: 0;
+  }
+
+
+
+  .sp-menu-list {
+    border-bottom: 1px solid white;
+    /* ↑下線 */
+    text-align: left;
+    /* ↑文字は左寄せ */
+    line-height: 2.0;
+    /* ↑行間 */
+    padding: 16px;
+    /* ↑余白 */
+  }
+
+  .sp-menu-list a {
+    /* ↑文字自体にスタイルを設定する */
+    color: white;
+    text-decoration: none;
+  }
+
+  .sp-menu-top {
+    font-size: 18px;
+  }
+
+  .sp-menu-bottom {
+    font-size: 11px;
+  }
+
+  #nav-input:checked ~ .nav-contents {
+    opacity: .8;
+  }
+
+  .main,.aside {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 790px) {
+  .sp-menu-list {
+    display: none;
+  }
+}
+
+
